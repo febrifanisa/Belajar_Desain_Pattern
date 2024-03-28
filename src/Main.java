@@ -11,5 +11,20 @@ public class Main {
         modelduck.performFly(); //akan memanggil constructor modelduck(FlyNoWay())
         modelduck.setFlyBehavior(new FlyWithRocketPower());
         modelduck.performFly();
+        System.out.println("\n\n");
+
+
+        //Tugas
+        Animal dog = new Dog();
+        Animal cat = new Cat();
+        SoundStrategy dogSound = new AnimalSound(dog);
+        SoundStrategy catSound = new AnimalSound(cat);
+        // Mainkan suara anjing
+        dogSound.makeSound();
+        // Ganti strategi dengan suara kucing
+        dogSound = catSound;
+        // Mainkan suara kucing
+        dogSound.makeSound();
+        System.out.println("\n\n");
     }
 }
